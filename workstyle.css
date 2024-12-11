@@ -1,0 +1,729 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    background-color: #faf9f6;
+}
+body {
+    font-family: 'satoshi', sans-serif;
+    font-size: 2rem;
+    font-weight: medium;
+    background-color:  #faf9f6; /* Black background */
+    margin: 0;
+    padding: 0;
+    color: #faf9f6; /* Ensure text is visible on a black background */
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll if there's extra padding/margin */
+}
+
+
+/* Persistent Top Bar */
+header {
+    margin-top: 0.5rem;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent;
+    width: 100%;
+}
+.navbar {
+  
+    position: fixed; /* Always stays at the top */
+    top: 0; /* Aligns it to the top of the viewport */
+    width: 100%; /* Ensures it spans the full width */
+    z-index: 1000; /* Ensures it appears above other elements */
+    background-color: rgba(250, 249, 246, 0.9); /* Adjust the last value for opacity (0 to 1) */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+}
+
+
+
+.navbar .logo a {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #191918;
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar .nav-links a {
+    font-size: 1.1rem;
+    color: #191918;
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Persistent underline for the active link */
+.navbar .nav-links a.active::after {
+   
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    background-color: #2d3480;;
+    border-radius: 10px;
+    width: 100%; /* Always visible */
+    transition: transform 0.3s ease; /* Used for hover animation */
+    transform-origin: center;
+}
+
+/* Hover underline animation for the active link */
+.navbar .nav-links a.active:hover::after {
+    transform: scaleX(1.2); /* Slightly expands underline on hover */
+}
+
+/* No underline for non-active links */
+.navbar .nav-links a:not(.active)::after {
+    content: none;
+}
+
+/* Background hover effect for non-active links */
+.navbar .nav-links a:not(.active):hover {
+    font-weight: 500;
+    color:#2d3480;
+
+}
+
+
+
+/* Make the label and project align horizontally */
+.projects-container {
+    display: flex;
+    align-items: flex-start;
+    gap:10rem;
+    position: relative;
+}
+
+/* Latest Projects label */
+.vertical-label {
+    position: sticky;
+    top: 18%;
+   margin-top: 5rem;
+    margin-bottom: 20px;
+    margin-left:4rem
+}
+
+.vertical-label h2 {
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    font-size: 3.8rem;
+    color: #c2c2c2;
+    font-weight: 550;
+    letter-spacing: 0.1rem;
+    margin: 0;
+}
+
+/* Projects content */
+.projects-content {
+    flex-grow: 1;
+}
+
+.container {
+    display: flex;
+    padding: 50px;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 10rem;
+    margin-left: -5%;
+}
+
+.main-content {
+    max-width: 500px;
+}
+
+.main-content h1 {
+    font-size: 3rem;
+    color: #191918;
+    margin-bottom: 1rem;
+}
+
+/* Container for tags below project headings */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap; /* Ensures tags wrap to the next line if too many */
+    gap: 0.5rem; /* Space between each tag */
+    margin-top: 1rem; /* Space between the heading and tags */
+    margin-bottom: 2rem; /* Space between the tags and hr line */
+}
+
+/* Individual tag style with grey outline */
+.tag {
+    font-size: 0.9rem; /* Smaller font size */
+    color: #191918; /* Text color */
+    background-color: transparent; /* No background color */
+    padding: 0.2rem 0.5rem; /* Padding for a compact look */
+    border: 1px solid #191918; /* Light grey outline */
+    border-radius: 12px; /* Rounded corners */
+    font-weight: 500;
+ 
+}
+
+.main-content hr {
+    border: none; /* Remove default border */
+    height: 0.15rem; /* Thickness of the line */
+    background-color: #191918; /* Line color */
+    border-radius: 5px; /* Rounds the edges of the line */
+    width: 12rem; /* Length of the line */
+
+}
+.main-content p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+.view-project {
+    font-size: 1.5rem; /* Adjust the size as needed */
+    text-decoration: none; /* Optional: remove underline */
+    color: #191918;
+    font-weight: 500;
+  }
+.project img {
+    height: 50;
+    padding-left: 20%;
+    width:100%
+    }
+
+    .project img {
+        transition: transform 0.3s ease-in-out; /* Smooth scaling transition */
+    }
+    
+    .project img:hover {
+        transform: scale(1.1); /* Increases size by 10% */
+    }
+    
+.landingpage {  
+    padding-top: 8.8rem;
+    display: flex;
+    width: 100%;
+    margin: auto;
+    background-color: #faf9f6;
+   
+}
+
+.image-section img {
+    
+    padding-left: 4rem;
+    width: 95%;
+    height: auto;
+   
+}
+
+.divright {
+    padding-top: 3rem;
+    padding-left: -4rem;
+   width: 55%;
+}
+
+.button-container {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.button {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #191918;
+    text-decoration: none;
+    border: 1px solid #2d3480;;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+.button:hover {
+    background-color:#2d3480;;
+    transform: translateY(-3px);
+    color: #faf9f6;
+}
+.button {
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+
+
+
+body {
+    font-family: 'satoshi', sans-serif;
+    word-spacing: 0.1rem;
+    letter-spacing: 0.0rem;
+    font-size: 2rem;
+    background-image: linear-gradient(to right, #ffffff, #ffffff);
+    color: #191918;
+}
+
+h1 {
+    font-family:'satoshi', sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'satoshi', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+
+
+
+footer {
+    background-color: #2d3480;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container {
+    
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items:first baseline;
+    margin: 0 auto; /* Center horizontally */
+}
+
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footlogo {
+    
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+.social-icons {
+    display: flex;
+    gap: 40px; /* Adjust the spacing between icons */
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: #faf9f6;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+/* Hover effect for social icons */
+.social-icon:hover {
+    color: #4361ee; /* Change the hover color here */
+}
+
+.footer-right {
+  
+    text-align: left;
+   
+}
+
+.footer-message {
+    font-size: 1.5rem;
+    color: #faf9f6;
+    font-weight: medium;
+    margin-bottom: 20px;
+    /* Use inline-flex for better text and icon alignment */
+    align-items: last baseline; /* Align the icon with the text */
+}
+
+/* Ensure only the text changes color on hover */
+.footer-message:hover {
+    color: #4361ee; /* Change text color when hovered */
+}
+
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #faf9f6;
+    font-size: 1rem;
+    transition: color 0.3s ease; /* Add transition for hover effect */
+}
+
+/* Hover effect for footer links */
+.footer-links a:hover {
+    color: #4361ee; /* Change color on hover */
+}
+
+.footer-bottom {
+    
+    display:flex;
+    width: 100%;
+    text-align:left;
+    margin-top: 40px;
+    border-top: 1px solid #faf9f6;
+    padding-top: 20px;
+   
+}
+
+.footer-copy {
+    font-size: 0.9rem;
+    color: #faf9f6;
+}
+/* Animation for image (pops from left) */
+.image-section {
+    animation: slideInFromLeft 1.2s ease-out forwards;
+    opacity: 0;
+}
+
+/* Animation for heading and paragraph (pops from right) */
+.divright {
+    animation: slideInFromRight 1.2s ease-out forwards;
+    opacity: 0;
+}
+
+/* Slide in from left keyframes */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Slide in from right keyframes */
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+/* Hover effect for links with arrow */
+.view-project:hover {
+    color: #2d3480;
+    font-weight: bold;
+    text-decoration: none;
+}
+.view-project:hover span {
+    transform: translateX(5px); /* Move the arrow slightly to the right */
+    transition: transform 0.3s ease;
+}
+
+/* Project container animation for scrolling */
+.container {
+    opacity: 0;
+    transform: scale(0.9); /* Start with a slightly smaller scale */
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/* Make project content visible on scroll */
+.visible {
+    opacity: 1;
+    transform: scale(1); /* Scale up to original size */
+}
+
+
+.page-up {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  #pageUpBtn {
+    background-color:#faf9f6 ;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #191918;
+    text-decoration: none;
+    border: 1px solid #2d3480;;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+  }
+  
+  #pageUpBtn:hover {
+    color:#faf9f6 ;
+    background-color:#2d3480;
+  }
+  
+
+.nav-links a.active {
+  
+    color: #2d3480; /* Optional: Change color for active link */
+    font-weight: bold;
+}
+
+
+/* Base Reset and Styles (unchanged) */
+
+/* Media Queries for Responsive Design */
+
+/* Tablets (768px and smaller) */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .vertical-label {
+        margin-left: 0;
+        align-self: flex-start;
+    }
+
+    .vertical-label h2 {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 5rem;
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .main-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-content p {
+        font-size: 1rem;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-right {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+/* Phones (480px and smaller) */
+@media (max-width: 480px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar .logo a {
+        font-size: 1.5rem;
+    }
+
+    .navbar .nav-links li {
+        margin: 0 10px;
+    }
+
+    .projects-container {
+        gap: 1.5rem;
+    }
+
+    .vertical-label h2 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .main-content h1 {
+        font-size: 2rem;
+    }
+
+    .main-content p {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        font-size: 0.9rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .footer-container {
+        padding: 20px;
+    }
+
+    .footer-message {
+        font-size: 1rem;
+    }
+
+    .footer-links a {
+        font-size: 0.8rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons {
+        gap: 20px;
+    }
+
+    .image-section img {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .divright {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #pageUpBtn {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Hamburger menu (hidden on large screens) */
+.hamburger {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 1.5rem;
+    z-index: 1100;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: #191918;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Popup overlay styles (applies only on mobile) */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-overlay.active {
+    display: flex;
+}
+
+.popup-content {
+    background-color: #faf9f6;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+}
+
+.popup-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popup-content li {
+    margin: 1rem 0;
+}
+
+.popup-content a {
+    text-decoration: none;
+    color: #191918;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.popup-content a:hover {
+    color: #2d3480;
+}
+
+/* Hamburger animations */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-6px);
+}
+
+/* Responsive Design: Mobile view */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Show hamburger on small screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide nav links on small screens */
+    }
+}

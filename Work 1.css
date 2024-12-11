@@ -1,0 +1,95 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #faf9f6;
+    color: #191918;
+    line-height: 1.5;
+}
+
+/* Persistent Header */
+.persistent-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #faf9f6;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: left;
+}
+
+.back-button {
+    font-size: 1.2rem;
+    color: #2d3480;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.back-button:hover {
+    color: #191918;
+}
+
+/* Slides Container */
+.slides-container {
+    padding-top: 5rem; /* Space for the persistent header */
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Project Slide Style */
+.project-slide {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .persistent-header {
+        padding: 0.8rem;
+    }
+
+    .back-button {
+        font-size: 1rem;
+    }
+
+    .slides-container {
+        padding-top: 4rem; /* Adjust spacing for header */
+        gap: 1.5rem; /* Reduce gap between slides */
+    }
+
+    .project-slide {
+        width: 90%; /* Slight margin on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .back-button {
+        font-size: 0.9rem;
+    }
+
+    .slides-container {
+        padding-top: 3.5rem;
+        gap: 1rem;
+    }
+
+    .project-slide {
+        width: 100%; /* Use full width */
+    }
+}

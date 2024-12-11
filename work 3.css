@@ -1,0 +1,56 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #faf9f6;
+    color: #191918;
+    line-height: 1.5;
+}
+
+/* Persistent Header */
+.persistent-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #faf9f6;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: left;
+}
+
+.back-button {
+    font-size: 1.2rem;
+    color: #2d3480;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.back-button:hover {
+    color: #191918;
+}
+
+/* PDF Container */
+.pdf-container {
+    padding-top: 5rem; /* Space for persistent header */
+    max-width: 100%;
+    height: calc(100vh - 5rem); /* Adjust height to fit viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pdf-viewer {
+    width: 90%; /* Use most of the screen width */
+    height: 100%; /* Full height of the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
