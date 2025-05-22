@@ -20,11 +20,31 @@
             <!-- Navigation Links -->
             <ul class="nav-links">
               <li><a href="Home.html" >Home</a></li>
-              <li><a href="#recent-projects">Work</a></li>
+              <li><a href="Home.html#recent-projects">Work</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="Contact.HTML" class="active">Contact</a></li>
           </ul>
-        </nav>
+          <!-- Below two div are for only devices maxwidth : 768px-->
+          <!-- hamburger -->
+          <div id="hamburger" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          
+          
+          <!--pop up -->
+          <div id="popup" class="popup-overlay">
+            <div class="popup-content">
+              <ul>
+                <li><a href="Home.html" class="active">Home</a></li>
+                <li><a href="Home.html#recent-projects">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Contact.HTML">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+    </nav>
     
       
     </header>
@@ -91,9 +111,25 @@
     <!-- Footer Bottom Section -->
     <div class="footer-bottom">
         <p class="footer-copy">&copy; 2024 Om.</p>
-        <p style="margin-left: 80%; font-size: 0.9rem;  color: #e0e0e0;">Developed & Designed by Om.</p>
+        <p style="font-size: 0.9rem;  color: #e0e0e0;" class="footer-bottom-right">Developed & Designed by Om.</p>
     </div>
 </footer> 
 
 </body>
+<script>
+const hamburger = document.getElementById('hamburger');
+const popup = document.getElementById('popup');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    popup.classList.toggle('active');
+});
+
+popup.addEventListener('click', (e) => {
+    if (e.target === popup) {
+        popup.classList.remove('active');
+        hamburger.classList.remove('active');
+    }
+});
+</script>
 </html>

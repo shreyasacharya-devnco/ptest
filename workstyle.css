@@ -126,7 +126,7 @@ header {
 .vertical-label h2 {
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
-    font-size: 3.8rem;
+    font-size: 3.5rem;
     color: #c2c2c2;
     font-weight: 550;
     letter-spacing: 0.1rem;
@@ -140,7 +140,7 @@ header {
 
 .container {
     display: flex;
-    padding: 50px;
+    padding: 30px;
     align-items: center;
     justify-content: space-between;
     max-width: 1200px;
@@ -221,7 +221,6 @@ header {
     background-color: #faf9f6;
    
 }
-
 .image-section img {
     
     padding-left: 4rem;
@@ -232,10 +231,16 @@ header {
 
 .divright {
     padding-top: 3rem;
-    padding-left: -4rem;
+    padding-left: 4rem;
    width: 55%;
 }
 
+.divright h2 {
+    font-size: 3rem;
+}
+.divright p{
+    padding-right: 17%;
+}
 .button-container {
     margin-top: 2.5rem;
     display: flex;
@@ -391,7 +396,9 @@ footer {
     padding-top: 20px;
    
 }
-
+.footer-bottom-right{
+    margin-left: 80%;
+}
 .footer-copy {
     font-size: 0.9rem;
     color: #faf9f6;
@@ -497,7 +504,7 @@ footer {
 
 /* Tablets (768px and smaller) */
 @media (max-width: 768px) {
-    .navbar {
+    /* .navbar {
         padding: 1rem 2rem;
         flex-direction: column;
         align-items: flex-start;
@@ -544,7 +551,7 @@ footer {
         flex-direction: column;
         gap: 1rem;
     }
-
+    */
     .footer-container {
         flex-direction: column;
         align-items: center;
@@ -552,6 +559,98 @@ footer {
 
     .footer-right {
         text-align: center;
+        margin-top: 20px;
+    }
+    .navbar {
+        height:2.6rem;
+    }
+    .navbar .nav-links{
+        display: none; 
+    }
+    .landingpage{
+        padding-top: 5rem;
+        padding-bottom: 1rem;
+    }
+    .image-section {
+        width:50%;
+        display:flex;
+        flex-direction: column;
+        align-items: end;
+    }
+    .image-section img{
+         padding-left: 0rem;
+         width:90%;
+         height:auto;
+    }
+    .divright{
+        padding: 0px;
+        padding-right:0.8rem;
+    }
+    .divright h1{
+        font-size: 2.5rem;
+    }
+    .divright h2{
+        font-size : 2rem;
+    }
+    .divright p{
+        width: 100%;
+    }
+    .divright .button-container{
+        position:relative;
+        top : 1vw;
+        right : 30vw;
+    }
+    .divright p{
+        font-size: 1rem;
+    }
+    .projects-container{
+        gap:2rem;
+    }
+    .vertical-label{
+        margin-left: 2rem;
+        
+    }
+    .vertical-label h2 {
+        font-size: 2.5rem;
+    }
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 5rem;
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .main-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-content p {
+        font-size: 1rem;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .button{
+        font-size: 1rem;
+        width:75%;
+    }
+    .project img{
+        padding:0px;
+        padding-top:1rem;
+        width:80%;
+        height:auto;
+    }
+    .footlogo{
+        text-align: center;
+    }
+    footer{
+        padding-bottom: 10px;
+    }
+    .footer-bottom{
         margin-top: 20px;
     }
 }
@@ -564,39 +663,46 @@ footer {
 
     .navbar {
         padding: 0.5rem 1rem;
+        display:flex;
+        flex-direction: column;
     }
 
     .navbar .logo a {
         font-size: 1.5rem;
     }
 
-    .navbar .nav-links li {
-        margin: 0 10px;
-    }
+    /* .navbar .nav-links li {
+        margin: 0 5px;
+        font-size: 0.6rem;
+    } */
 
     .projects-container {
         gap: 1.5rem;
     }
-
+    .vertical-label{
+        margin-left:0rem;
+    }
     .vertical-label h2 {
         font-size: 2rem;
     }
 
     .container {
         padding: 10px;
+        width:100%;
     }
 
     .main-content h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     .main-content p {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
 
     .button {
         font-size: 0.9rem;
         padding: 0.4rem 1rem;
+        width:50%;
     }
 
     .footer-container {
@@ -604,7 +710,7 @@ footer {
     }
 
     .footer-message {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .footer-links a {
@@ -620,6 +726,11 @@ footer {
         gap: 20px;
     }
 
+    .landingpage{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .image-section img {
         width: 100%;
         padding-left: 0;
@@ -629,10 +740,33 @@ footer {
         width: 100%;
         padding: 1rem;
     }
-
+    .divright h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .divright h2{
+        font-size:1.6rem;
+        text-align: center;
+    }
     #pageUpBtn {
         font-size: 1rem;
         padding: 0.5rem 1rem;
+    }
+    .divright .button-container{
+        position:static;
+        width:100%;
+    }
+    .divright p{
+        padding:0px;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+    .popup-overlay.active{
+        width:100%;
+        height:100%;
+    }
+    .footer-bottom-right{
+    margin-left: 0%;
     }
 }
 
@@ -662,11 +796,11 @@ footer {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 1000;
     align-items: center;
     justify-content: center;
+    padding:3rem;
 }
 
 .popup-overlay.active {
@@ -706,7 +840,8 @@ footer {
 
 /* Hamburger animations */
 .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translateY(6px);
+    transform: rotate(45deg) translateY(11px);
+    background-color:#faf9f6;
 }
 
 .hamburger.active span:nth-child(2) {
@@ -714,16 +849,17 @@ footer {
 }
 
 .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-6px);
+    transform: rotate(-45deg) translateY(-11px);
+    background-color:#faf9f6;
 }
 
 /* Responsive Design: Mobile view */
 @media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide nav links on small screens */
+    }
     .hamburger {
         display: flex; /* Show hamburger on small screens */
     }
 
-    .nav-links {
-        display: none; /* Hide nav links on small screens */
-    }
 }

@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <head>           
+</head>           
                 
   <header>
     <!-- Persistent Top Bar -->
@@ -27,9 +27,31 @@
           <li><a href="about.html">About</a></li>
           <li><a href="Contact.HTML">Contact</a></li>
       </ul>
+
+        <!-- Below two div are for only devices maxwidth : 768px-->
+        <!-- hamburger -->
+         <div id="hamburger" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+         </div>
+
+
+         <!--pop up -->
+         <div id="popup" class="popup-overlay">
+            <div class="popup-content">
+              <ul>
+                <li><a href="#landingpage" >Home</a></li>
+                <li><a href="#recent-projects">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Contact.HTML">Contact</a></li>
+              </ul>
+            </div>
+         </div>
     </nav>
    
-  
+  </header> 
+  <!-- header tag was not there -->
   
 
 
@@ -42,9 +64,9 @@
 
     <div class="divright"> 
         <h1 style="margin-bottom: -5;"> Hello! I'm Om Tiwari </h1>
-        <h2 style="color:  #2d3480 ;margin-top: -0.5rem; margin-bottom:1rem; font-size: 3rem;"> A UX Designer</h2>
+        <h2 style="color:  #2d3480 ;margin-top: -0.5rem; margin-bottom:1rem;"> A UX Designer</h2>
         
-        <p style="margin-right: 2rem; padding-right: 17%; font-stretch: wider; font-weight: 300; margin-top: 4%;"> 
+        <p style="margin-right: 2rem; font-stretch: wider; font-weight: 300; margin-top: 4%;"> 
           Designing with intent, blending innovation and aesthetics to create intuitive, user-centered experiences. Passionate about using design for social good, currently honing my craft as a UXD student at MIT-SD.
         </p> 
         <div class="button-container">
@@ -82,7 +104,8 @@
             <a href="work 1.html" class="view-project font-size=1rem;">View Project <span>&#8599;</span></a>
           </div>
           <div class="project img">
-            <img src="Kaze mock up.png" alt="NASA Spacewalk Execution System">
+            <img src="Kaze airlines 1.png" alt="NASA Spacewalk Execution System"> 
+                                                                                                                                                                                      <!-- kaze mock up.png is not available-->
           </div>
         </div><br><br><br><br><br><br>
         
@@ -138,7 +161,7 @@
             <a href="#" class="view-project">View Project <span>&#8599;</span></a>
           </div>
           <div class="project img">
-            <img src="MacBook Air - 1.png" alt="Lunar Habitat Construction Simulator">
+            <img src="Kaze 24.jpg" alt="Lunar Habitat Construction Simulator">                                                                                                            <!-- MacBook Air - 1.png not available--> 
           </div>
         </div>
       </div>
@@ -185,7 +208,7 @@
     <!-- Footer Bottom Section -->
     <div class="footer-bottom">
         <p class="footer-copy">&copy; 2024 Om.</p>
-        <p style="margin-left: 80%; font-size: 0.9rem;  color: #e0e0e0;">Developed & Designed by Om.</p>
+        <p style="font-size: 0.9rem;  color: #e0e0e0;" class="footer-bottom-right">Developed & Designed by Om.</p>
     </div>
 </footer> 
 
@@ -197,7 +220,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelectorAll(".nav-links a");
-    const sections = document.querySelectorAll("#landingpage, #recent-projects, #contact");
+    const sections = document.querySelectorAll("#landingpage, #recent-projects, #contact");                                                                                           //contact id is not given to any section 
     const offset = 300; // Adjust for navbar height
 
     // Smooth scrolling for internal links
@@ -318,8 +341,8 @@ hamburger.addEventListener('click', () => {
 
 popup.addEventListener('click', (e) => {
     if (e.target === popup) {
-        popup.classList.remove('active');
-        hamburger.classList.remove('active');
+        popup.classList.toggle('active');
+        hamburger.classList.toggle('active');
     }
 });
 

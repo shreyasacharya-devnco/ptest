@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me Section</title>
-  <link rel="stylesheet" href="styles.css">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+   <link rel="stylesheet" href="workstyle.css">
+                                                                                                                                                                                                          <!-- style.css is not a stylesheet -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -21,11 +23,32 @@
 
         <!-- Navigation Links -->
         <ul class="nav-links">
-          <li><a href= "home.html">Home</a></li>
-          <li><a href="#recent-projects">Work</a></li>
+          <li><a href= "Home.html">Home</a></li>
+          <li><a href="Home.html#recent-projects">Work</a></li>
           <li><a href="about.html" class="active">About</a></li>
           <li><a href="contact.html">Contact</a></li>
       </ul>
+
+      <!-- Below two div are for only devices maxwidth : 768px-->
+        <!-- hamburger -->
+         <div id="hamburger" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+         </div>
+
+
+         <!--pop up -->
+         <div id="popup" class="popup-overlay">
+            <div class="popup-content">
+              <ul>
+                <li><a href="Home.html" >Home</a></li>
+                <li><a href="Home.html#recent-projects">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Contact.HTML">Contact</a></li>
+              </ul>
+            </div>
+         </div>
     </nav>
 </header>
 
@@ -257,6 +280,20 @@
       slides[slideIndex-1].style.display = "block";  
       dots[slideIndex-1].className += " active";
     }
+    const hamburger = document.getElementById('hamburger');
+const popup = document.getElementById('popup');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    popup.classList.toggle('active');
+});
+
+popup.addEventListener('click', (e) => {
+    if (e.target === popup) {
+        popup.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    }
+});
     </script>
 
 </html>
