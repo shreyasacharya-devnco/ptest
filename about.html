@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me Section</title>
   <!-- <link rel="stylesheet" href="styles.css"> -->
-   <link rel="stylesheet" href="workstyle.css">
+   <link rel="stylesheet" href="Aboutstyle.css">
                                                                                                                                                                                                           <!-- style.css is not a stylesheet -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
               
 </head>
-
-  <header>
+<body>
+   <header>
     <!-- Persistent Top Bar -->
     <nav class="navbar top-bar">
         <!-- Logo -->
@@ -52,8 +52,6 @@
     </nav>
 </header>
 
-<body>
-
   <div class="about-section">
 
     <div class="content">
@@ -65,7 +63,7 @@
         </div>
        
        <div class="disbody">
-        <h1 style="margin-bottom: 1rem;">More about me.</h1>
+        <h1 style="margin-bottom: 1rem; color:#2d3480">More about me.</h1>
         <p>
             Namaste! My name is Om, and I was born and raised in Pune, India. My journey in the creative field began when my mother enrolled me in an art class during my early school years. Art was something I enjoyed back then, but as time passed, my interests evolved. I became deeply involved in sports, especially football, and discovered a passion for all kinds of music, even exploring DJing and cars. <br><br>
 
@@ -79,56 +77,57 @@
       
     </div>
   </div>
-    
-<br><br><br><br><br><br>
+  <div class="gap"></div>
   <div class="car">
  <div class="infocus">
-    <h1>Intrests in focus</h1><br>
-    <p style="font-size: 1rem; color:#191918">I am a passionate football player. I love to Sketch, listen and occasionally mix music, play guitar and photography. Enthusiastic about learning something new, the science behind it. I have an open mind to Solving problems.</p>
+    <h1 style="color:#2d3480">Intrests in focus</h1><br>
+    <p style=" color:#191918">I am a passionate football player. I love to Sketch, listen and occasionally mix music, play guitar and photography. Enthusiastic about learning something new, the science behind it. I have an open mind to Solving problems.</p>
  </div>
 <div class="slideshow-container">
 
     <div class="mySlides fade">
      
-      <img src="Car 1.png" style="width:100%">
+      <img src="Car 1.png">
     
     </div>
     
     <div class="mySlides fade">
      
-      <img src="Car 2.png" style="width:100%">
+      <img src="Car 2.png">
      
     </div>
     
     <div class="mySlides fade">
       
-      <img src="car 3.png" style="width:100%">
+      <img src="car 3.png">
       
     </div>
 
     <div class="mySlides fade">
       
-        <img src="car 4.png" style="width:100%">
+        <img src="car 4.png">
         
       </div>
       <div class="mySlides fade">
       
-        <img src="car 5.png" style="width:100%">
+        <img src="car 5.png">
         
       </div>
 
       <div class="mySlides fade">
       
-        <img src="car 6.png" style="width:100%">
+        <img src="car 6.png" >
         
       </div>
     
-    <a class="prev" onclick="plusSlides(-1)">❮</a>
-    <a class="next" onclick="plusSlides(1)">❯</a>
+      <div class="ano-btn">
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
   
     
     <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot active" onclick="currentSlide(1)"></span> 
         <span class="dot" onclick="currentSlide(2)"></span> 
         <span class="dot" onclick="currentSlide(3)"></span> 
         <span class="dot" onclick="currentSlide(4)"></span> 
@@ -139,12 +138,12 @@
   
     
 </div>
-
+ <div class="gap"></div>
   <!-- More about me section above this -->
   
   <section class="about-details">
     <div class="education-section">
-      <h1 style="font-size: 3rem; color: #2d3480;">Education</h1><br>
+      <h1 style="color: #2d3480;">Education</h1><br>
       <div class="timeline">
         <!-- Timeline items for education -->
         <div class="timeline-item">
@@ -200,60 +199,65 @@
         </div>
       </div>
     </div>
-  </body>
-   
-
-  
-
   </section>
   <br>
   <div class="page-up">
     <button id="pageUpBtn" onclick="scrollToTop()">&#8593;&nbsp;&nbsp;&nbsp;Scroll Up</button>
-
+    
   </div>
   
   <br>
   <footer>
     <div class="footer-container">
-        <!-- Left Section (Logo and Social Icons) -->
+      <!-- Left Section (Logo and Social Icons) -->
         <div class="footer-left">
           <div class="footlogo">
-           <h3>Om.</h3><Br>
-          </div>
+            <h3>Om.</h3><Br>
+            </div>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/om-tiwari-747b72336/" class="social-icon"><i class="fab fa-linkedin"></i></a>
                 <a href="https://www.behance.net/omtiwari5" class="social-icon"><i class="fab fa-behance"></i></a>
                 <a href="https://www.instagram.com/" class="social-icon"><i class="fab fa-instagram"></i></a>
             </div>
-        </div>
-      
+          </div>
+          
         <!-- Right Section (Text and Links) -->
-<div class="footer-right">
-  <p class="footer-message">
+        <div class="footer-right">
+          <a href="Contact.HTML">
+    <p class="footer-message">
       I'd love to hear your thoughts or suggestions on my work! You can <br>
       also reach out for collaborations or just say hello!    <span style="font-size:1.8rem;"> &#8599; </span><br>
       <br>
-  </p>
+    </p>
+  </a>
   <ul class="footer-links">
-      <li><a href="Home.html">Home</a></li>
+    <li><a href="Home.html#recent-projects">Work</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="Contact.HTML">Contact</a></li>
-  </ul>
+    </ul>
+  </div>
 </div>
-    </div>
 
-    <!-- Footer Bottom Section -->
-    <div class="footer-bottom">
-        <p class="footer-copy">&copy; 2024 Om.</p>
-        <p style="margin-left: 80%; font-size: 0.9rem;  color: #e0e0e0;">Developed & Designed by Om.</p>
-    </div>
+<!-- Footer Bottom Section -->
+<div class="footer-bottom">
+  <p class="footer-copy">&copy; 2024 Om.</p>
+  <p style=" font-size: 0.9rem;  color: #e0e0e0;">Developed & Designed by Om.</p>
+</div>
 </footer> 
 
 
 
 
+</body>
 
-    <script>
+<script>
+    // Scroll to top function
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    }
     let slideIndex = 1;
     showSlides(slideIndex);
     

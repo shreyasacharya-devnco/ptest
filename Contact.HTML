@@ -61,17 +61,17 @@
               <li><i class="fab fa-linkedin"></i> Om_tiwari</li>
               <li><i class="fas fa-map-marker-alt"></i> Pimpri, Pune</li>
             </ul>
-            <a href="Om_Tiwari_CV.pdf" class="download-cv" download>
+            <a href="Sample.pdf" class="download-cv" download>
               <i class="fas fa-cloud-arrow-down"></i> Download CV
             </a>
           </div>
           
       <div class="contact-right">
         <h2>Got a project? Let's Talk.</h2>
-        <form action="#" method="POST" class="contact-form">
-          <input type="text" name="name" placeholder="Enter Name" required>
-          <input type="email" name="email" placeholder="Enter Email" required>
-          <textarea name="message" placeholder="Tell me about your project" required></textarea>
+        <form action="#" onsubmit="handleSubmit(event)" method="POST" class="contact-form">
+          <input type="text" name="name" id="name" placeholder="Enter Name" required>
+          <input type="email" name="email" id="email" placeholder="Enter Email" required>
+          <textarea name="message" id="message" placeholder="Tell me about your project" required></textarea>
           <button type="submit" class="submit-btn">Submit</button>
         </form>
       </div>
@@ -95,15 +95,17 @@
         
         <!-- Right Section (Text and Links) -->
 <div class="footer-right">
-  <p class="footer-message">
+  <a href="Contact.HTML">
+    <p class="footer-message">
       I'd love to hear your thoughts or suggestions on my work! You can <br>
       also reach out for collaborations or just say hello!    <span style="font-size:1.8rem;"> &#8599; </span><br>
       <br>
   </p>
+  </a>
   <ul class="footer-links">
-      <li><a href="#">Work</a></li>
+      <li><a href="Home.html#recent-projects">Work</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="Contact.HTML">Contact</a></li>
   </ul>
 </div>
     </div>
@@ -117,6 +119,15 @@
 
 </body>
 <script>
+  function handleSubmit(event) {
+  event.preventDefault(); 
+  console.log('Form Submitted Successfully.');
+  document.getElementById("name").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("message").value = "";
+
+}
+
 const hamburger = document.getElementById('hamburger');
 const popup = document.getElementById('popup');
 
