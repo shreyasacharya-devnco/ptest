@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* ── Light Mode ─────────────────────────────────────────
+       Background  #FEFEFE → 0 0% 100%
+       Headers     #3B3A44 → 246 8% 25%
+       Body/Labels #444444 → 0 0% 27%
+       Primary     #5D7CE2 → 226 70% 63%
+       Strokes     #AAAAAF → 240 3% 68%
+       Secondary   #F2F2F2 → 0 0% 95%
+    ─────────────────────────────────────────────────────── */
+    --background: 0 0% 100%;
+    --foreground: 246 8% 25%;        /* #3B3A44 — headings & primary text */
+
+    --card: 0 0% 100%;
+    --card-foreground: 246 8% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 246 8% 25%;
+
+    --primary: 226 70% 63%;          /* #5D7CE2 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 95%;           /* #F2F2F2 */
+    --secondary-foreground: 246 8% 25%;
+
+    --muted: 0 0% 95%;               /* #F2F2F2 */
+    --muted-foreground: 0 0% 27%;    /* #444444 — body copy & labels */
+
+    --accent: 226 70% 63%;           /* matches primary */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 226 20% 88%;           /* light, airy stroke */
+    --input: 226 20% 88%;
+    --ring: 226 70% 63%;
+
+    --radius: 0.75rem;
+
+    --philosophy-bg: 0 0% 95%;
+
+    /* ── Extra surface & tag palette ────────────────────── */
+    --surface: 226 50% 97%;                   /* subtle blue-white lift */
+    --surface-foreground: 246 8% 25%;
+
+    --tag-blue: 226 85% 92%;                  /* UX / Design */
+    --tag-blue-foreground: 226 65% 35%;
+
+    --tag-purple: 270 70% 93%;                /* Creative / Branding */
+    --tag-purple-foreground: 270 50% 35%;
+
+    --tag-teal: 175 60% 88%;                  /* Tech / Data / IoT */
+    --tag-teal-foreground: 175 55% 22%;
+
+    --tag-amber: 38 90% 90%;                  /* Strategy / Research */
+    --tag-amber-foreground: 38 75% 28%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 246 8% 25%;
+    --sidebar-primary: 226 70% 63%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 95%;
+    --sidebar-accent-foreground: 246 8% 25%;
+    --sidebar-border: 226 20% 88%;
+    --sidebar-ring: 226 70% 63%;
+  }
+
+  .dark {
+    /* ── Dark Mode ──────────────────────────────────────────
+       Background  #111111 → 0 0% 7%
+       Headers     #FAFAFC → 240 25% 98%
+       Body/Labels #F1F1F1 → 0 0% 95%
+       Primary     #5D7CE2 → 226 70% 63%  (same as light)
+       Strokes     #AAAAAF → 240 3% 68%   (same as light)
+       Secondary   #313131 → 0 0% 19%
+    ─────────────────────────────────────────────────────── */
+    --background: 0 0% 7%;           /* #111111 */
+    --foreground: 240 25% 98%;       /* #FAFAFC — headings & primary text */
+
+    --card: 0 0% 11%;                /* slightly lifted from bg for depth */
+    --card-foreground: 240 25% 98%;
+
+    --popover: 0 0% 11%;
+    --popover-foreground: 240 25% 98%;
+
+    --primary: 226 70% 63%;          /* #5D7CE2 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 19%;           /* #313131 */
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 19%;               /* #313131 */
+    --muted-foreground: 0 0% 70%;    /* dimmed label text for readability hierarchy */
+
+    --accent: 226 70% 63%;           /* matches primary */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 226 10% 22%;           /* subtle dark-mode stroke */
+    --input: 226 10% 22%;
+    --ring: 226 70% 63%;
+
+    --philosophy-bg: 0 0% 13%;
+
+    /* ── Extra surface & tag palette (dark) ─────────────── */
+    --surface: 226 25% 11%;
+    --surface-foreground: 240 25% 98%;
+
+    --tag-blue: 226 50% 20%;
+    --tag-blue-foreground: 226 70% 80%;
+
+    --tag-purple: 270 40% 20%;
+    --tag-purple-foreground: 270 60% 80%;
+
+    --tag-teal: 175 40% 14%;
+    --tag-teal-foreground: 175 55% 65%;
+
+    --tag-amber: 38 55% 18%;
+    --tag-amber-foreground: 38 80% 72%;
+
+    --sidebar-background: 0 0% 7%;
+    --sidebar-foreground: 240 25% 98%;
+    --sidebar-primary: 226 70% 63%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 19%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 226 10% 22%;
+    --sidebar-ring: 226 70% 63%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    overflow-x: clip;
+  }
+
+  body {
+    @apply bg-background text-foreground font-manrope;
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+
+  ::-moz-selection {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+
+  /* Radix popovers (Select, Dropdown, etc.) lock body scroll by forcing
+     `overflow: hidden; position: relative` on <body> via [data-scroll-locked].
+     This site scrolls through Lenis on <html>/<window> — body is never the
+     scroll container — so that override instead makes the browser treat body
+     as a (non-scrolling) sticky containing block, snapping every
+     `position: sticky` element to its static position while open. Neutralize
+     it with a higher-specificity rule so sticky elements stay put. */
+  html body[data-scroll-locked] {
+    overflow: visible !important;
+    position: static !important;
+  }
+}

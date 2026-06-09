@@ -1,0 +1,35 @@
+.curve-container {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0px);
+  pointer-events: none;
+  z-index: 3;
+  animation: float 2.5s ease-in-out 0.5s infinite;
+}
+
+.curve-text {
+  overflow: visible;
+}
+
+.curve-container.hide {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: none;
+}
+
+@keyframes float {
+  0%   { transform: translateX(-50%) translateY(0px);  }
+  50%  { transform: translateX(-50%) translateY(-6px); }
+  100% { transform: translateX(-50%) translateY(0px);  }
+}
+
+.curve-text {
+  width: 260px;
+}
+
+.curve-text .text {
+  font-size: 15px;
+  fill: #555;
+  letter-spacing: 1px;
+}
